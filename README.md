@@ -72,6 +72,7 @@ To test our new Docker image we can start a container using the image we just cr
 docker run --rm -p 5000:8080 --name my_app1 app1
 ```
 
+This is a Docker command that will run a container based on the Docker image named "app1" with the name "my_app1", and expose its internal port 8080 to the host's port 5000.
 Loading the url `http://localhost:5000/WeatherForecast` in a browser or executing a cURL should return a JSON response with a list of fake weather forecasts.
 
 ```bash
