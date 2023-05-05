@@ -1,4 +1,4 @@
-# Gettomg Started with Kubernetes
+# Getting Started with Kubernetes
 
 ## Prerequisites 
 * .NET 7 SDK & Runtime
