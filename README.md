@@ -194,7 +194,7 @@ In this example we use the value of the external IP column as the host and the f
 http://localhost:5000/WeatherForecast
 ```
 
-Loading this URL should return a JSON response with fake weather forcasts.
+Loading this URL should return a JSON response with fake weather forecasts.
 
 ## ArgoCD
 
