@@ -333,7 +333,7 @@ kind: Kustomization
 namePrefix: dev-
 
 resources:
-  - ../../base
+  - ../../bases
 ```
 
 Two differences that we want the production deployment to have is a different port and an increased amount of replicas. To achieve this we use the concept of patches, which are used to modify resources.
