@@ -202,6 +202,8 @@ Argo CD is an open-source, Kubernetes-native Continuous Delivery (CD) tool that 
 
 ### Setting up ArgoCD
 
+Note that you can have multiple K8's clusters and by default commands will run in the active one marked as * when checking `kubectl config get-contexts` and also these kubectl command are able to communicate with the cluster independently of the directory in your local machine you run them. In case you need to change to a different cluster use `kubectl config use-context <context-name>`
+
 To install ArgoCD in Kubernetes we first need to create the ArgoCD namespace. Kubernetes namespaces are a way to divide cluster resources among multiple users, teams, or projects.
 
 ```bash
