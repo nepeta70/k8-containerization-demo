@@ -232,7 +232,7 @@ With this patch we're now able to access the service outside of Kubernetes using
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath='{.data.password}'
 ```
 
-The value is bse64 encoded, it can be decoded in various ways, however it depends on the shell you're using.
+The value is base64 encoded, it can be decoded in various ways, however it depends on the shell you're using.
 
 Ubuntu/WSL
 ```bash
