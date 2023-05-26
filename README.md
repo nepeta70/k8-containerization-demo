@@ -226,6 +226,7 @@ To expose ArgoCD we need to patch its `argocd-server` service.
 kubectl patch svc argocd-server -n argocd --type=merge --patch-file argocd-server.service.patch.yaml
 ```
 
+Now using `kubectl get svc -n argocd argocd-server` you will see argocd-server and using external IP and port values in a browser you will be able to login.
 With this patch we're now able to access the service outside of Kubernetes using `http://localhost:5010/`. The initial password for the admin user account can be found inside the secret `argocd-initial-admin-secret`.
 
 ```bash
