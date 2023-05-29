@@ -223,10 +223,10 @@ To expose ArgoCD we need to patch its `argocd-server` service.
 
 ```bash
 # kubernetes/apps/argocd/
-kubectl patch svc argocd-server -n argocd --type=merge --patch-file argocd-server.service.patch.yaml
+kubectl patch service argocd-server --namespace argocd --type=merge --patch-file argocd-server.service.patch.yaml
 ```
 
-With this patch we're now able to access the service outside of Kubernetes using `http://localhost:5010/`. The initial password for the admin user account can be found inside the secret `argocd-initial-admin-secret`.
+With this patch we're now able to access the service outside of Kubernetes using `http://localhost:5010/`. The exposed port can be found by executing `kubectl get service argocd-server --namespace argocd`. The initial password for the admin user account can be found inside the secret `argocd-initial-admin-secret`.
 
 ```bash
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath='{.data.password}'
