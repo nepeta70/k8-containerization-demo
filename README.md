@@ -112,6 +112,8 @@ Test if the installation was successful by getting the Kubernetes version.
 kubectl version --short
 ```
 
+In the case that kubectl is already set up, the context will need to be switched. Using `kubectl config get-contexts` we're able to see which kubernetes is currently selected through noting the one with an asterix. To change the current context we can use `kubectl config use-context <context-name>`.
+
 ### Setting up our application
 
 Next we need to create some Kubernetes manifests, which tell Kubernetes how to configure our application.
@@ -201,8 +203,6 @@ Loading this URL should return a JSON response with fake weather forecasts.
 Argo CD is an open-source, Kubernetes-native Continuous Delivery (CD) tool that automates the deployment, scaling, and management of applications in Kubernetes clusters. It follows the GitOps methodology, which uses Git as the single source of truth for declarative infrastructure and application configurations.
 
 ### Setting up ArgoCD
-
-Note that you can have multiple K8's clusters and by default commands will run in the active one marked as * when checking `kubectl config get-contexts` and also these kubectl command are able to communicate with the cluster independently of the directory in your local machine you run them. In case you need to change to a different cluster use `kubectl config use-context <context-name>`
 
 To install ArgoCD in Kubernetes we first need to create the ArgoCD namespace. Kubernetes namespaces are a way to divide cluster resources among multiple users, teams, or projects.
 
