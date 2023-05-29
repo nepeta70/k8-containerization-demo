@@ -87,7 +87,7 @@ If an error comes up that the container is already running it should be stopped.
 docker stop my_app1
 ```
 
-The final step is to publish our image to a remote Docker registry. The app used for this Demo is already available as the image `jeanfrg/app1`, however to publish your own we need to use these commands.
+The final step is to publish our image to a remote Docker registry. The app used for this Demo is already available as the image jeanfrg/app1, however to publish your own you'll need to create an account on [hub.docker.com](https://hub.docker.com), then we'll need to run `docker login` in our command line. Once this has been done we need to use these commands to publish a new image. A new repository on your Docker Hub account will be created.
 
 ```bash
 docker tag app1 <your-docker-hub-id>/app1:v1
