@@ -365,7 +365,7 @@ kind: Kustomization
 namePrefix: prod-
 
 resources:
-  - ../../base
+  - ../../bases
 
 patches:
   - path: deployment.patch.yaml
