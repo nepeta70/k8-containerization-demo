@@ -112,6 +112,8 @@ Test if the installation was successful by getting the Kubernetes version.
 kubectl version --short
 ```
 
+In the case that kubectl is already set up, the context will need to be switched. Using `kubectl config get-contexts` we're able to see which kubernetes is currently selected through noting the one with an asterix. To change the current context we can use `kubectl config use-context <context-name>`.
+
 ### Setting up our application
 
 Next we need to create some Kubernetes manifests, which tell Kubernetes how to configure our application.
