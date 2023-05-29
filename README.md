@@ -210,6 +210,8 @@ To install ArgoCD in Kubernetes we first need to create the ArgoCD namespace. Ku
 kubectl create namespace argocd
 ```
 
+This new namespace will be listed in the output of this command `kubectl get namespaces`.
+
 Next we need to apply the ArgoCD manifests.
 
 ```bash
