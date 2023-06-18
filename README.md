@@ -1,4 +1,5 @@
 # Getting Started with Kubernetes
+This Kubernetes (k8s) demo is aimed at beginners which aim at understanding how common k8s tools and services work using a hands-on approach without needing to jump in at the deep end of the massive amount of information.
 
 ## Prerequisites 
 * .NET 7 SDK & Runtime
